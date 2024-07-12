@@ -1,3 +1,13 @@
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Now you can access your environment variables
+openai_key = os.getenv("OPENAI_API_KEY")
+hf_username = os.getenv("HF_USERNAME")
+hf_token = os.getenv("HF_TOKEN")
 import streamlit as st
 from langchain.prompts import PromptTemplate
 from langchain_community.llms import CTransformers
